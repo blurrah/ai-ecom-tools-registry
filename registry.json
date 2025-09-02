@@ -85,6 +85,34 @@
       ]
     },
     {
+      "name": "search-products",
+      "type": "registry:component",
+      "title": "Product Search",
+      "description": "AI SDK tool that searches for products.",
+      "author": "Boris Besemer <https://borisbesemer.com>",
+      "creators": [
+        {
+          "name": "Boris Besemer",
+          "handle": "blurrah",
+          "url": "https://github.com/blurrah",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/2852507?v=4",
+          "role": "author"
+        }
+      ],
+      "files": [
+        {
+          "path": "registry/ai-tools/tools/search-products/tool.ts",
+          "type": "registry:file",
+          "target": "~/ai/tools/search-products/tool.ts"
+        },
+        {
+          "path": "registry/ai-tools/tools/search-products/component.tsx",
+          "type": "registry:file",
+          "target": "~/ai/tools/search-products/component.tsx"
+        }
+      ]
+    },
+    {
       "name": "stats",
       "type": "registry:component",
       "title": "Public Stats",

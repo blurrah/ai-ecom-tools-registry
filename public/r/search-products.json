@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "search-products",
+  "type": "registry:component",
+  "title": "Product Search",
+  "author": "Boris Besemer <https://borisbesemer.com>",
+  "description": "AI SDK tool that searches for products.",
+  "dependencies": ["ai", "zod"],
+  "files": [
+    {
+      "path": "registry/ai-tools/tools/search-products/tool.ts",
+      "content": "import { tool } from \"ai\"\nimport { z } from \"zod\"\n\nexport interface MarkdownResult {\n  markdown: string\n}\n\nexport const markdownTool = tool({\n  description: \"Render Markdown content (recommended in UI).\",\n  inputSchema: z.object({\n    markdown: z.string().min(1),\n  }),\n  execute: async ({ markdown }) => {\n    return { markdown }\n  },\n})\n\nexport default markdownTool\n",
+      "type": "registry:file",
+      "target": "~/ai/tools/search-products/tool.ts"
+    },
+    {
+      "path": "registry/ai-tools/tools/search-products/component.tsx",
+      "content": "export function ProductSearchComponent() {\n  return <div>ProductSearchComponent</div>\n}\n",
+      "type": "registry:file",
+      "target": "~/ai/tools/search-products/component.tsx"
+    }
+  ]
+}
