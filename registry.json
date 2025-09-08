@@ -70,7 +70,7 @@
         }
       ],
       "dependencies": ["zod", "ai"],
-      "registryDependencies": ["@ai-tools/card"],
+      "registryDependencies": ["@ai-tools/card", "@ai-tools/button", "@ai-tools/carousel"],
       "files": [
         {
           "path": "registry/ai-tools/tools/websearch/tool.ts",
@@ -99,6 +99,8 @@
           "role": "author"
         }
       ],
+      "dependencies": ["@modelcontextprotocol/sdk/client", "zod", "ai"],
+      "registryDependencies": ["@ai-tools/card"],
       "files": [
         {
           "path": "registry/ai-tools/tools/search-products/tool.ts",
@@ -106,69 +108,14 @@
           "target": "~/ai/tools/search-products/tool.ts"
         },
         {
+          "path": "registry/ai-tools/tools/search-products/client.ts",
+          "type": "registry:file",
+          "target": "~/ai/tools/search-products/client.ts"
+        },
+        {
           "path": "registry/ai-tools/tools/search-products/component.tsx",
           "type": "registry:file",
           "target": "~/ai/tools/search-products/component.tsx"
-        }
-      ]
-    },
-    {
-      "name": "stats",
-      "type": "registry:component",
-      "title": "Public Stats",
-      "description": "AI SDK tool that fetches global earthquake counts from USGS and renders a chart.",
-      "dependencies": ["zod", "ai", "recharts"],
-      "registryDependencies": ["@ai-tools/card", "@ai-tools/chart"],
-      "author": "Nicklas Scharpff <https://n1cklas.com>",
-      "creators": [
-        {
-          "name": "xn1cklas",
-          "handle": "xn1cklas",
-          "url": "https://github.com/xn1cklas",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/64584979?v=4",
-          "role": "author"
-        }
-      ],
-      "files": [
-        {
-          "path": "registry/ai-tools/tools/stats/tool.ts",
-          "type": "registry:file",
-          "target": "~/ai/tools/stats/tool.ts"
-        },
-        {
-          "path": "registry/ai-tools/tools/stats/component.tsx",
-          "type": "registry:file",
-          "target": "~/ai/tools/stats/component.tsx"
-        }
-      ]
-    },
-    {
-      "name": "markdown",
-      "type": "registry:component",
-      "title": "Markdown Renderer",
-      "description": "AI SDK tool that transports markdown; render with streamdown.",
-      "author": "Nicklas Scharpff <https://n1cklas.com>",
-      "creators": [
-        {
-          "name": "xn1cklas",
-          "handle": "xn1cklas",
-          "url": "https://github.com/xn1cklas",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/64584979?v=4",
-          "role": "author"
-        }
-      ],
-      "dependencies": ["zod", "ai", "streamdown"],
-      "registryDependencies": ["@ai-tools/card"],
-      "files": [
-        {
-          "path": "registry/ai-tools/tools/markdown/tool.ts",
-          "type": "registry:file",
-          "target": "~/ai/tools/markdown/tool.ts"
-        },
-        {
-          "path": "registry/ai-tools/tools/markdown/component.tsx",
-          "type": "registry:file",
-          "target": "~/ai/tools/markdown/component.tsx"
         }
       ]
     },
